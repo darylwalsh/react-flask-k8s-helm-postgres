@@ -1,0 +1,18 @@
+{{- if .Values.persistence.enabled -}}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ template "reactdo.fullname" . }}-reactdo
+  labels:
+    app: {{ template "reactdo.name" . }}
+    chart: {{ template "reactdo.chart" . }}
+    release: {{ .Release.Name | quote }}
+    heritage: {{ .Release.Service | quote }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.reactdo.accessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.reactdo.size | quote }}
+  {{ include "reactdo.storageClass" . }}
+{{- end -}}

@@ -1,0 +1,22 @@
+apiVersion: v1
+appVersion: 0.20180422.201901061035
+description: reactdo is a standards-compliant, simple to use wiki optimized for creating
+  documentation. It is targeted at developer teams, workgroups, and small companies.
+  All data is stored in plain text files, so no database is required.
+engine: gotpl
+home: http://www.reactdo.org/
+icon: https://bitnami.com/assets/stacks/reactdo/img/reactdo-stack-110x117.png
+keywords:
+- reactdo
+- wiki
+- http
+- web
+- application
+- php
+maintainers:
+- email: containers@bitnami.com
+  name: Bitnami
+name: reactdo
+sources:
+- https://github.com/bitnami/bitnami-docker-reactdo
+version: 5.2.9
